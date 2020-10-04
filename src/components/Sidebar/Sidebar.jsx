@@ -30,10 +30,11 @@ function Sidebar() {
 			<br />
 			<strong className='sidebar__title'>PLAYLISTS</strong>
 			<hr />
-
-			{playlists?.items?.map((playlist) => (
-				<SidebarOption title={playlist.name} />
-			))}
+			<div className='sidebar__optionsContainer'>
+				{playlists?.items?.map((playlist) => (
+					<SidebarOption title={playlist.name} />
+				))}
+			</div>
 		</div>
 	);
 }

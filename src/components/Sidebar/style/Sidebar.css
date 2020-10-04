@@ -30,4 +30,14 @@
   height: 70px;
   padding: 10px;
 }
+
+.sidebar__optionsContainer {
+  overflow: scroll;
+}
+
+.sidebar__optionsContainer::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
 /*# sourceMappingURL=Sidebar.css.map */

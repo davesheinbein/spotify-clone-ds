@@ -26,6 +26,13 @@
   padding: 10px;
 }
 
+.body__info > img {
+  height: 20vw;
+  margin: 0 20px;
+  -webkit-box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
 .body__shuffle {
   font-size: 80px !important;
   margin-left: 50px;
@@ -46,7 +53,7 @@
   margin-right: 20px;
 }
 
-.body__shuffle:hover {
+.body__icons:hover {
   -webkit-transition: 100ms -webkit-transform ease-in;
   transition: 100ms -webkit-transform ease-in;
   transition: 100ms transform ease-in;
@@ -68,13 +75,7 @@
 .body__songs {
   z-index: 1;
   margin: 20px -30px;
-}
-
-.body__info > img {
-  height: 20vw;
-  margin: 0 20px;
-  -webkit-box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+  padding: 0px 0px 3em;
 }
 
 .body__infoText {

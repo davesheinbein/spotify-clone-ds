@@ -59,10 +59,11 @@
 	object-fit: contain;
 }
 
-.footer__songInfo > h4 {
-	margin-bottom: 5px;
-}
-
-.footer__songInfo > p {
-	font-size: 12px;
+.footer__songInfo {
+	& > h4 {
+		margin-bottom: 5px;
+	}
+	& > p {
+		font-size: 12px;
+	}
 }
