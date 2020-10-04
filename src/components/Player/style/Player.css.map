@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACtB;;AAED,AAAA,aAAa,CAAC;EACb,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,CAAC;CACZ",
     "sources": [
         "Player.scss"
     ],

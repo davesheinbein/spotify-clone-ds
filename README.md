@@ -34,11 +34,15 @@
 
 ##### 5. React
 
-##### 6. Node.js
+<!-- V helps fix prop drilling V -->
 
-##### 7. Git
+##### 6. React Context API
 
-##### 8. Firebase
+##### 7. Node.js
+
+##### 8. Git
+
+##### 9. Firebase
 
 ## Potential Next Steps:
 

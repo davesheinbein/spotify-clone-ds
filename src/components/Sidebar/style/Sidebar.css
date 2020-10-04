@@ -1,0 +1,33 @@
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 230px;
+  height: 100vh;
+  color: white;
+  background-color: #040404;
+}
+
+.sidebar__title {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.sidebar__logo {
+  margin-right: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 70px;
+  padding: 10px;
+}
+/*# sourceMappingURL=Sidebar.css.map */

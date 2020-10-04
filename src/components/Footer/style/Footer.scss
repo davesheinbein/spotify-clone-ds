@@ -1,0 +1,68 @@
+.footer {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	bottom: 0;
+	padding: 20px;
+	height: 65px;
+	width: 97%;
+	background-color: #282828;
+}
+
+// Makes slider green specifically (#1ed15e)
+.footer__right * .MuiSlider-root {
+	color: #1ed15e;
+}
+.footer__left {
+	// flex takes up 30% of the parent container
+	flex: 0.3;
+	display: flex;
+	align-items: center;
+	color: white;
+	width: 300px;
+}
+
+.footer__green {
+	color: #1ed15e;
+}
+
+.footer__center {
+	// flex takes up 40% of the parent container
+	flex: 0.4;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 300px;
+	padding: 0 100px;
+	color: white;
+}
+
+.footer__icon:hover,
+.footer__green:hover {
+	transition: transform 0.2s ease-in-out;
+	transform: scale(1.2) !important;
+}
+
+.footer__right {
+	flex: 0.3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	// flex takes up 30% of the parent container
+}
+
+.footer__albumLogo {
+	height: 60px;
+	width: 60px;
+	margin-right: 20px;
+	object-fit: contain;
+}
+
+.footer__songInfo > h4 {
+	margin-bottom: 5px;
+}
+
+.footer__songInfo > p {
+	font-size: 12px;
+}
