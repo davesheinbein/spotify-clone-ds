@@ -54,6 +54,8 @@
 
 ## Potential Next Steps:
 
+##### - [] Add more functionality and access - i.e. access other playlist, play songs directly, etc...
+
 ##### - [] Update CSS further to make responsive on all size screens
 
 ### Click the link to view David Sheinbeins Portfolio website
