@@ -2,11 +2,15 @@
 
 ### Click the link to view the website
 
-[Amazon Clone Webstite](https://clone-ds.web.app/)
+[Spotify Clone Webstite](https://spotify-clone-ds.web.app)
 
 ### About Us
 
-##### Spotify Clone built utilizing React, SASS, and more. Hosted on Firebase.
+##### Frontend UI Spotify Clone built utilizing React, Spotify API, SASS, and more. Hosted utilizing Firebase.
+
+##### Limited control functionality - <br/> Open Spotify on another device to access...
+
+###### Pause/Play functionality and access to weekly Discover Weekly playlist
 
 #### Project Work:
 
@@ -18,9 +22,13 @@
 
 ## Screenshot:
 
-<!-- ![Home Page Sceenshot](screenshots/homeScreenshot.png)
+![Login Page Sceenshot](screenshots/loginScreenshot.png)
 
-[Home Page Sceenshot](https://imgur.com/GKAQjCW) -->
+[Login Page Sceenshot](https://imgur.com/0fzb2on)
+
+![Playlist Page Sceenshot](screenshots/playlistScreenshot.png)
+
+[Playlist Page Sceenshot](https://imgur.com/Xb4jPyY)
 
 ## Technologies Used:
 
@@ -46,7 +54,7 @@
 
 ## Potential Next Steps:
 
-##### - [X] Update CSS further to make responsive on all size screens
+##### - [] Update CSS further to make responsive on all size screens
 
 ### Click the link to view David Sheinbeins Portfolio website
 

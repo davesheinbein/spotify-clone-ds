@@ -1,9 +1,12 @@
 import React from 'react';
 import './style/SongRow.css';
 
-function SongRow({ track }) {
+function SongRow({ track, playSong }) {
+	// console.log(track, '<< track');
 	return (
-		<div className='songRow'>
+		<div
+			className='songRow'
+			onClick={() => playSong(track.id)}>
 			<img
 				src={track.album.images[0].url}
 				alt={track.album}

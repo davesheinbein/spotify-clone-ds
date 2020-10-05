@@ -31,6 +31,10 @@
 	margin-left: 50px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	&:hover {
+		transition: 100ms transform ease-in;
+		transform: scale(1.08);
+	}
 }
 
 .body__icons {
@@ -38,10 +42,6 @@
 	align-items: center;
 	& > .MuiSvgIcon-root {
 		margin-right: 20px;
-	}
-	&:hover {
-		transition: 100ms transform ease-in;
-		transform: scale(1.08);
 	}
 }
 

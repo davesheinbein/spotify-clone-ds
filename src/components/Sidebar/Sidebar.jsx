@@ -21,6 +21,15 @@ function Sidebar() {
 				src='https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg'
 				alt='Spotify Logo'
 			/>
+			<div className='sidebar__subText'>
+				<strong className='sidebar__subTextLogo'>
+					Limited control remote...
+				</strong>
+				<br />
+				<span>
+					Open Spotify on another device to access...
+				</span>
+			</div>
 			<SidebarOption title='Home' Icon={Home} />
 			<SidebarOption title='Search' Icon={Search} />
 			<SidebarOption

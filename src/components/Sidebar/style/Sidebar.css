@@ -31,6 +31,22 @@
   padding: 10px;
 }
 
+.sidebar__subText {
+  font-size: 0.5rem;
+  margin-top: -28px;
+  margin-bottom: 10px;
+}
+
+.sidebar__subText .sidebar__subTextLogo {
+  margin-left: 70px;
+}
+
+.sidebar__subText span {
+  margin-left: 10px;
+  font-size: 0.25rem;
+  color: red;
+}
+
 .sidebar__optionsContainer {
   overflow: scroll;
 }

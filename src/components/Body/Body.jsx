@@ -1,9 +1,10 @@
+import React from 'react';
+// Material UI Icons
 import {
 	Favorite,
 	MoreHoriz,
 	PlayCircleFilled,
 } from '@material-ui/icons';
-import React from 'react';
 // Context API
 import { useStateValue } from '../../StateProvider';
 // Components
@@ -13,6 +14,50 @@ import './style/Body.css';
 
 function Body({ spotify }) {
 	const [{ discover_weekly }, dispatch] = useStateValue();
+
+	const playPlaylist = (id) => {
+		spotify
+			.play({
+				uri: `spotify:playlist:37i9dQZEVXcJ2LzYvHxUGv`, // 37i9dQZEVXcJ2LzYvHxUGv
+			})
+			.then((res) => {
+				spotify.getMyCurrentPlayingTrack().then((r) => {
+					// console.log(r, 'getMyCurrentPlayingTrack');
+					dispatch({
+						type: 'SET_ITEM',
+						item: r.item,
+					});
+					dispatch({
+						type: 'SET_PLAYING',
+						playing: true,
+					});
+				});
+			});
+	};
+
+	const playSong = (id) => {
+		spotify
+			.play({
+				uris: [`spotify:track:${id}`],
+			})
+			.then((res) => {
+				spotify.getMyCurrentPlayingTrack().then((res) => {
+					// console.log(
+					// 	res,
+					// 	'<< Play song getMyCurrentPlayingTrack'
+					// );
+					dispatch({
+						type: 'SET_ITEM',
+						item: res.item,
+					});
+					dispatch({
+						type: 'SET_PLAYING',
+						playing: true,
+					});
+				});
+			});
+	};
+
 	return (
 		<div className='body'>
 			<Header spotify={spotify} />
@@ -29,14 +74,21 @@ function Body({ spotify }) {
 			</div>
 			<div className='body__songs'>
 				<div className='body__icons'>
-					<PlayCircleFilled className='body__shuffle' />
+					<PlayCircleFilled
+						className='body__shuffle'
+						onClick={playPlaylist}
+					/>
 					<Favorite fontSize='large' />
 					<MoreHoriz />
 				</div>
 
 				{/* Lists all songs */}
 				{discover_weekly?.tracks.items.map((item) => (
-					<SongRow key={item.id} track={item.track} />
+					<SongRow
+						key={item.id}
+						playSong={playSong}
+						track={item.track}
+					/>
 				))}
 			</div>
 		</div>

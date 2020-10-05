@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
+import { Switch, Route } from 'react-router-dom';
 import Login from '../../components/Login/Login';
 import Player from '../../components/Player/Player';
 // Access to Spotify config
@@ -31,6 +32,8 @@ function App() {
 		// console.log(_token, '<< token');
 
 		if (_token) {
+			spotify.setAccessToken(_token);
+
 			// Old state
 			// setToken(_token);
 			// provides the access token to the Spotify API
@@ -40,7 +43,26 @@ function App() {
 				token: _token,
 			});
 
-			spotify.setAccessToken(_token);
+			spotify
+				.getPlaylist('37i9dQZEVXcJ2LzYvHxUGv')
+				.then((response) =>
+					dispatch({
+						type: 'SET_DISCOVER_WEEKLY',
+						discover_weekly: response,
+					})
+				);
+
+			spotify.getMyTopArtists().then((response) =>
+				dispatch({
+					type: 'SET_TOP_ARTISTS',
+					top_artists: response,
+				})
+			);
+
+			dispatch({
+				type: 'SET_SPOTIFY',
+				spotify: spotify,
+			});
 
 			// this returns a promise that select the user
 			spotify.getMe().then((user) => {
@@ -62,27 +84,25 @@ function App() {
 					playlists: playlists,
 				});
 			});
-
-			spotify
-				.getPlaylist('37i9dQZEVXcJ2LzYvHxUGv')
-				.then((response) =>
-					dispatch({
-						type: 'SET_DISCOVER_WEEKLY',
-						discover_weekly: response,
-					})
-				);
 		}
 		// console.log(_token, '<< _token set');
-	}, []);
+	}, [token, dispatch]);
 
 	// console.log(token, '<< token set');
 	// console.log(user, '<< user');
 
 	return (
-		<div className='app'>
-			{/* spotify is being passed as a prop */}
-			{token ? <Player spotify={spotify} /> : <Login />}
-		</div>
+		<Switch>
+			<Route exact path='/'>
+				<div className='app'>
+					{/* spotify is being passed as a prop */}
+					{token ? <Player spotify={spotify} /> : <Login />}
+					{/* Alternate way to write this  */}
+					{/* {!token && <Login />}
+				{token && <Player spotify={spotify} />} */}
+				</div>
+			</Route>
+		</Switch>
 	);
 }
 
