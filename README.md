@@ -6,7 +6,7 @@
 
 ### About Us
 
-##### Frontend UI Spotify Clone built utilizing React, Spotify API, SASS, and more. Hosted utilizing Firebase.
+##### Front-end UI Spotify Clone built utilizing React, Spotify API, SASS, and more. Hosted utilizing Firebase.
 
 ##### Limited control functionality - <br/> Open Spotify on another device to access...
 
