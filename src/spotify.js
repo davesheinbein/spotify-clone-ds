@@ -9,7 +9,9 @@ const authEndpoint =
 	'https://accounts.spotify.com/authorize';
 
 // Redirects back to the homepage of the app
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'https://spotify-clone-ds.web.app/';
+// http://localhost:3000/ // - for dev purposes
+// https://spotify-clone-ds.web.app/ // - for deployment purposes
 
 // clientId unique to Spotify api
 const clientId = '8bc827328ecf4342993338df260424cd';

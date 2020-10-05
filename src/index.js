@@ -3,29 +3,19 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import App from './pages/App/App';
 import * as serviceWorker from './serviceWorker';
-import {
-	BrowserRouter as Router,
-	Route,
-} from 'react-router-dom';
 // Context API - similar to redux
 import { StateProvider } from './StateProvider';
 import reducer, { initialState } from './reducer';
 
 ReactDOM.render(
-	<Router>
-		<React.StrictMode>
-			{/* Passes state down to make accessible in entire app */}
-			<StateProvider
-				initialState={initialState}
-				reducer={reducer}>
-				<Route
-					render={({ history }) => (
-						<App history={history} />
-					)}
-				/>
-			</StateProvider>
-		</React.StrictMode>
-	</Router>,
+	<React.StrictMode>
+		{/* Passes state down to make accessible in entire app */}
+		<StateProvider
+			initialState={initialState}
+			reducer={reducer}>
+			<App />
+		</StateProvider>
+	</React.StrictMode>,
 	document.getElementById('root')
 );
 

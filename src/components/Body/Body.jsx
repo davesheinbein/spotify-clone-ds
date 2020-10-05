@@ -64,7 +64,7 @@ function Body({ spotify }) {
 			<div className='body__info'>
 				<img
 					src={discover_weekly?.images[0].url}
-					alt={discover_weekly?.title}
+					alt='discover weekly'
 				/>
 				<div className='body__infoText'>
 					<strong>PLAYLIST</strong>

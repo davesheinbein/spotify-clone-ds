@@ -18,14 +18,14 @@ import { useStateValue } from '../../StateProvider';
 import './style/Footer.css';
 
 function Footer({ spotify }) {
-	const [
-		{ token, item, playing },
-		dispatch,
-	] = useStateValue();
+	const [{ item, playing }, dispatch] = useStateValue();
 
 	useEffect(() => {
 		spotify.getMyCurrentPlaybackState().then((r) => {
-			console.log(r, '<< response getMyCurrentPlaybackState');
+			console.log(
+				r,
+				'<< response getMyCurrentPlaybackState'
+			);
 
 			dispatch({
 				type: 'SET_PLAYING',
@@ -90,7 +90,7 @@ function Footer({ spotify }) {
 					<img
 						className='footer__albumLogo'
 						src={item?.album.images[0].url}
-						alt={item?.name}
+						alt='album'
 					/>
 				) : (
 					<img

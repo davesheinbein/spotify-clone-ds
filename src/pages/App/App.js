@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
-import { Switch, Route } from 'react-router-dom';
 import Login from '../../components/Login/Login';
 import Player from '../../components/Player/Player';
 // Access to Spotify config
@@ -18,7 +17,7 @@ function App() {
 	// const [token, setToken] = useState(null);
 	// dispatch allows you to target and update the
 	// state in the reducer and provided by stateProvider
-	const [{ user, token }, dispatch] = useStateValue();
+	const [{ token }, dispatch] = useStateValue();
 
 	useEffect(() => {
 		const hash = getTokenFromUrl();
@@ -92,17 +91,13 @@ function App() {
 	// console.log(user, '<< user');
 
 	return (
-		<Switch>
-			<Route exact path='/'>
-				<div className='app'>
-					{/* spotify is being passed as a prop */}
-					{token ? <Player spotify={spotify} /> : <Login />}
-					{/* Alternate way to write this  */}
-					{/* {!token && <Login />}
+		<div className='app'>
+			{/* spotify is being passed as a prop */}
+			{token ? <Player spotify={spotify} /> : <Login />}
+			{/* Alternate way to write this  */}
+			{/* {!token && <Login />}
 				{token && <Player spotify={spotify} />} */}
-				</div>
-			</Route>
-		</Switch>
+		</div>
 	);
 }
 
