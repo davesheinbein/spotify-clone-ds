@@ -1,8 +1,8 @@
-# **Spotify Clone**
+# **Fake Spotify Front-end UI**
 
 ### Click the link to view the website
 
-[Spotify Clone Webstite](https://spotify-clone-ds.web.app)
+[Fake Spotify Front-end UI Webstite](https://spotify-clone-ds.web.app)
 
 ### About Us
 
