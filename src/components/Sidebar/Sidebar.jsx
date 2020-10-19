@@ -9,6 +9,8 @@ import {
 } from '@material-ui/icons';
 // State from context API
 import { useStateValue } from '../../StateProvider';
+// import logo
+import spotifyLogo from '../../images/fakeSpotifyLogo.png';
 import './style/Sidebar.css';
 
 function Sidebar() {
@@ -18,7 +20,7 @@ function Sidebar() {
 		<div className='sidebar'>
 			<img
 				className='sidebar__logo'
-				src='https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg'
+				src={spotifyLogo}
 				alt='Spotify Logo'
 			/>
 			<div className='sidebar__subText'>
